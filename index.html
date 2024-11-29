@@ -142,8 +142,11 @@
        const op=document.querySelectorAll(".op")
       function addValue(val){
          if(sc.value==""){
-             op.value="";
-             sc.value=op.value;
+             op.forEach(a=>{
+                 a.value="";
+             val=a.value;
+             })
+             
          }
          sc.value=sc.value+val;
         var v=val;
