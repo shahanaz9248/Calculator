@@ -141,8 +141,9 @@
        const sc=document.getElementById("screen");
        const op=document.querySelectorAll(".op")
       function addValue(val){
-         if(sc.value==""){
+        
              op.forEach(a=>{
+                  if(sc.value==""){
                  a.value="";
              val=a.value;
              })
