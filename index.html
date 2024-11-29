@@ -119,10 +119,10 @@
                 <button onclick="window.location='index.html'">C</button>
             </div>
             <div class="ope">
-                <button onclick="addValue('+')" class="op">+</button>
-                <button onclick="addValue('-')" class="op">-</button>
-                <button onclick="addValue('*')" class="op">*</button>
-                <button onclick="addValue('/')" class="op">/</button>
+                <button onclick="addOpe('+')" >+</button>
+                <button onclick="addOpe('-')" >-</button>
+                <button onclick="addOpe('*')" >*</button>
+                <button onclick="addOpe('/')" >/</button>
             </div>
 
         </div>
@@ -139,20 +139,18 @@
 </body>
 <script>
        const sc=document.getElementById("screen");
-       const op=document.querySelectorAll(".op")
       function addValue(val){
-        
-             op.forEach(a=>{
-                  if(sc.value==""){
-                 a.value="";
-             val=a.value;
-             })
-             
-         }
          sc.value=sc.value+val;
-        var v=val;
 
       }
+
+    function addOpe(op){
+        if(sc.value==""){
+            return;
+        }else{
+             sc.value=sc.value+op;
+        }
+    }
      
       function eve(){
         if(sc.value!==""){
