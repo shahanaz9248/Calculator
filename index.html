@@ -150,10 +150,9 @@
         if(sc.value==""){
             return;
         }else{
-            if(digit!=="+" || digit!=="-" || digit!=="*" || digit!=="/" || digit!=="%"){
-             sc.value=sc.value+op;
-                
-                digit=op;
+            if (!['+', '-', '*', '/'].includes(digit)) {
+                sc.value += op; // Append operator
+                digit = op;
             }
             else{
              sc.value=sc.value.slice(0,-1);
