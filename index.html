@@ -138,17 +138,26 @@
     </main>
 </body>
 <script>
+
+    var digit="";
        const sc=document.getElementById("screen");
       function addValue(val){
          sc.value=sc.value+val;
-
+        digit=val;
       }
 
     function addOpe(op){
         if(sc.value==""){
             return;
         }else{
+            if(digit==val){
              sc.value=sc.value+op;
+            digit=op;
+            }
+            else{
+             op=digit;
+             sc.value=sc.value+op;
+            }
         }
     }
      
