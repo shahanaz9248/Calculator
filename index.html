@@ -150,7 +150,7 @@
         if(sc.value==""){
             return;
         }else{
-            if (!['+', '-', '*', '/'].includes(digit)) {
+            if (digit!=="+" && digit!=="-" && digit!=="*" && digit!=="/" && digit!=="%") {
                 sc.value += op; // Append operator
                 digit = op;
             }
