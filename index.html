@@ -139,7 +139,7 @@
 </body>
 <script>
 
-    var digit="";
+    var digit="0";
        const sc=document.getElementById("screen");
       function addValue(val){
          sc.value=sc.value+val;
@@ -150,13 +150,15 @@
         if(sc.value==""){
             return;
         }else{
-            if(digit==val){
+            if(digit!=="+" || digit!=="-" || digit!=="*" || digit!=="/" || digit!=="%"){
              sc.value=sc.value+op;
-            digit=op;
+                
+                digit=op;
             }
             else{
-             op=digit;
-             sc.value=sc.value+op;
+             sc.value=sc.value.slice(0,-1);
+                sc.value=sc.value+op;
+                digit=op;
             }
         }
     }
